@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CampusLance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-layout">
+        <!-- Left Side: Information -->
+        <div class="auth-left">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-brand-logo"><i class="fa-solid fa-leaf"></i></div>
+                CampusLance
+            </a>
+
+            <div class="auth-content">
+                <h1>Welcome Back!</h1>
+                <p>We source the healthiest and most beautiful skills to bring nature's finest to your campus. We provide expert care advice to ensure your projects thrive.</p>
+                
+                <div class="social-login">
+                    <button class="btn-social">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="G" width="20">
+                        Login with Google
+                    </button>
+                    
+                    <div class="auth-divider"><span>or</span></div>
+
+                    <button class="btn-social">
+                        <i class="fa-solid fa-envelope" style="color: #ef4444;"></i>
+                        Login with Email Address
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Side: Interaction -->
+        <div class="auth-right">
+            <div class="auth-card">
+                <h2>Please Enter Your Login Details</h2>
+                <form action="dashboard.html">
+                    <div class="form-group">
+                        <label>Enter Email Address</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 0.5rem;">
+                        <label>Enter Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                    
+                    <div style="text-align: right; margin-bottom: 1.5rem;">
+                        <a href="#" style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                
+                <div class="form-footer" style="margin-top: 1.5rem;">
+                    Don't have an account? <a href="register.html">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Campus - CampusLance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-layout">
+        <!-- Left Side: Information -->
+        <div class="auth-left">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-brand-logo"><i class="fa-solid fa-leaf"></i></div>
+                CampusLance
+            </a>
+
+            <div class="auth-content">
+                <h1>Join the Campus</h1>
+                <p>Sign up utilizing your university email to unlock access to exclusive campus resources and reliable freelancers.</p>
+                
+                <div class="auth-verify-banner">
+                    <h4><i class="fa-regular fa-circle-check"></i> Verified Only</h4>
+                    <p>All accounts must use a .edu email address to ensure safety across our platform.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Side: Interaction -->
+        <div class="auth-right">
+            <div class="auth-card" style="max-width: 440px;">
+                <h2>Create Your Account</h2>
+                <form action="dashboard.html">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullName" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Enter Email Address</label>
+                        <input type="email" class="form-control" placeholder="name@university.edu" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Enter Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>I want to mainly:</label>
+                        <div class="role-toggle">
+                            <div class="role-btn">Freelance</div>
+                            <div class="role-btn active">Hire</div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+                
+                <div class="form-footer" style="margin-top: 1.5rem;">
+                    Already have an account? <a href="login.html">Log In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

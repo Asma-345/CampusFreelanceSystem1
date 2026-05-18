@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Project - CampusLance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-form-card {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-layout">
+        <!-- Left Side: Information -->
+        <div class="auth-left">
+            <a href="dashboard.html" class="nav-brand">
+                <div class="nav-brand-logo">+</div>
+                CampusLance
+            </a>
+
+            <div class="auth-content">
+                <h1>Find the Perfect Talent</h1>
+                <p>Post your project and let our campus experts help you bring your ideas to life.</p>
+                
+                <div class="auth-verify-banner">
+                    <h4><i class="fa-solid fa-lightbulb"></i> Pro Tip</h4>
+                    <p>Clearly state the issues you are facing to get more accurate proposals from freelancers.</p>
+                </div>
+            </div>
+
+            <div style="font-size: 2rem;">
+                🛠️
+            </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="auth-right">
+            <div class="auth-card project-form-card">
+                <h2>Post New Project</h2>
+                <form id="projectForm">
+                    <div class="form-group">
+                        <label>Project Title</label>
+                        <input type="text" id="projectTitle" class="form-control" placeholder="e.g. Debugging React Website" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="projectCategory" class="form-control" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 0.8rem;">
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Content Writing">Content Writing</option>
+                            <option value="Data Analysis">Data Analysis</option>
+                            <option value="Video Editing">Video Editing</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Issues / Project Details</label>
+                        <textarea id="projectIssues" class="form-control" placeholder="Explain the project and the specific issues you need help with..." required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Budget (PKR)</label>
+                            <input type="text" id="projectBudget" class="form-control" placeholder="e.g. Rs. 5000 - Rs. 10000" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Deadline (Optional)</label>
+                            <input type="text" id="projectDeadline" class="form-control" placeholder="e.g. 2 days">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Post Project</button>
+                    <a href="dashboard.html" class="btn btn-secondary" style="margin-top: 1rem; display: block; text-align: center; text-decoration: none;">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

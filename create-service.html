@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Service - CampusLance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .service-form-card {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-layout">
+        <!-- Left Side: Information -->
+        <div class="auth-left">
+            <a href="dashboard.html" class="nav-brand">
+                <div class="nav-brand-logo">+</div>
+                CampusLance
+            </a>
+
+            <div class="auth-content">
+                <h1>Offer Your Expertise</h1>
+                <p>Create a service listing to showcase your skills to the campus community. Be detailed to attract more clients.</p>
+                
+                <div class="auth-verify-banner">
+                    <h4><i class="fa-solid fa-wand-magic-sparkles"></i> Pro Tip</h4>
+                    <p>Services with clear descriptions and listed past projects get 3x more inquiries.</p>
+                </div>
+            </div>
+
+            <div style="font-size: 2rem;">
+                🚀
+            </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="auth-right">
+            <div class="auth-card service-form-card">
+                <h2>Create New Service</h2>
+                <form id="serviceForm">
+                    <div class="form-group">
+                        <label>Service Title</label>
+                        <input type="text" id="serviceTitle" class="form-control" placeholder="e.g. Professional UI/UX Design" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="serviceCategory" class="form-control" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Content Writing">Content Writing</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option value="Video Editing">Video Editing</option>
+                            <option value="Academic Tutoring">Academic Tutoring</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Service Description</label>
+                        <textarea id="serviceDescription" class="form-control" placeholder="Describe what you offer in detail..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Previous Projects (Optional)</label>
+                        <textarea id="serviceProjects" class="form-control" placeholder="List any relevant links or descriptions of past work..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Publish Service</button>
+                    <a href="dashboard.html" class="btn btn-secondary" style="margin-top: 1rem; display: block; text-align: center; text-decoration: none;">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

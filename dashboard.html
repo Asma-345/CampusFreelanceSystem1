@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CampusLance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="background-color: var(--bg-alt);">
+    
+    <!-- Navbar -->
+    <nav class="navbar" style="position: sticky; top: 0;">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-brand-logo"><i class="fa-solid fa-leaf"></i></div>
+                CampusLance
+            </a>
+            
+            <!-- Nav links removed -->
+
+            <div class="nav-actions">
+                <div class="badge" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                    Balance <span style="font-weight: 700; margin-left: 0.5rem;">Rs. 0</span>
+                </div>
+                <button class="btn btn-outline" style="border-color: var(--border-color); color: var(--text-body); padding: 0.5rem 1rem;" title="Profile">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+                <button class="btn btn-outline" style="border-color: var(--border-color); color: var(--text-body); padding: 0.5rem;" onclick="window.location.href='login.html';" title="Logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <!-- Welcome Section -->
+        <section class="welcome-card">
+            <div>
+                <div class="badge" style="margin-bottom: 1rem; background: var(--bg-alt); color: var(--text-body); border: 1px solid var(--border-color);">Dashboard Overview</div>
+                <h1 style="font-size: 2.25rem; margin-bottom: 0.5rem;">Welcome back, <span id="welcomeName" style="color: var(--primary);">Freelancer</span></h1>
+                <p>A quick snapshot of your activity and balance.</p>
+            </div>
+            <div class="wallet-card">
+                <div style="font-weight: 500; color: var(--text-body);">Wallet balance</div>
+                <div class="amount" style="margin: 0.5rem 0; color: var(--primary);">Rs. 0</div>
+                <div style="font-size: 0.85rem; color: var(--text-light);">Updated just now</div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-grid">
+            <div class="stat-card freelancer-only">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div>
+                    <div style="font-size: 0.9rem; color: var(--text-body); font-weight: 500;">Active Services</div>
+                    <div id="activeServicesCount" style="font-size: 1.5rem; font-weight: 700; color: var(--text-dark);">0</div>
+                </div>
+            </div>
+            <div class="stat-card freelancer-only">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div>
+                    <div style="font-size: 0.9rem; color: var(--text-body); font-weight: 500;">Completed Jobs</div>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--text-dark);">0</div>
+                </div>
+            </div>
+            <div class="stat-card client-only">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <div>
+                    <div style="font-size: 0.9rem; color: var(--text-body); font-weight: 500;">Posted Projects</div>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--text-dark);">0</div>
+                </div>
+            </div>
+            <div class="stat-card client-only">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <div style="font-size: 0.9rem; color: var(--text-body); font-weight: 500;">Freelancers Hired</div>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--text-dark);">0</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+                <div>
+                    <div id="earningLabel" style="font-size: 0.9rem; color: var(--text-body); font-weight: 500;">Earnings</div>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--text-dark);">Rs. 0</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="content-grid" id="dashboardContentGrid">
+            
+            <!-- FREELANCER VIEW PANELS -->
+            <!-- Your Services -->
+            <div class="panel-card freelancer-only" id="freelancerServicesPanel">
+                <div class="panel-header">
+                    <h3 style="font-size: 1.1rem;">Your Services</h3>
+                    <a href="create-service.html" style="font-size: 0.9rem; font-weight: 500; color: var(--primary);">Add New</a>
+                </div>
+                <div id="servicesListContainer">
+                    <div class="panel-empty">
+                        <div style="font-size: 2.5rem; color: var(--border-color); margin-bottom: 1.5rem;">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem;">No services listed yet</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 250px;">Offer your skills to the campus and start getting requests.</p>
+                        <button class="btn btn-primary" style="padding: 0.5rem 1.25rem;" onclick="window.location.href='create-service.html'">Create service</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Available Projects -->
+            <div class="panel-card freelancer-only" id="freelancerProjectsPanel">
+                <div class="panel-header">
+                    <h3 style="font-size: 1.1rem;">Available Projects</h3>
+                    <a href="#" style="font-size: 0.9rem; font-weight: 500; color: var(--primary);">View all</a>
+                </div>
+                <div id="availableProjectsContainer">
+                    <div class="panel-empty">
+                        <div style="font-size: 2.5rem; color: var(--border-color); margin-bottom: 1.5rem;">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem;">No projects available</h4>
+                        <p style="font-size: 0.9rem; max-width: 250px;">Check back later for new projects from clients.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Freelancer Recent Messages -->
+            <div class="panel-card freelancer-only" id="freelancerMessagesPanel">
+                <div class="panel-header">
+                    <h3 style="font-size: 1.1rem;">Recent Messages</h3>
+                    <a href="#" onclick="window.openChatbox()" style="font-size: 0.9rem; font-weight: 500; color: var(--primary);">Open Chat</a>
+                </div>
+                <div id="freelancerMessagesContainer">
+                    <div class="panel-empty">
+                        <div style="font-size: 2.5rem; color: var(--border-color); margin-bottom: 1.5rem;">
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem;">No messages yet</h4>
+                        <p style="font-size: 0.9rem; max-width: 250px;">When clients contact you about a service or project, their messages will appear here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CLIENT VIEW PANELS -->
+            <!-- Recent Messages -->
+            <div class="panel-card client-only" id="clientMessagesPanel">
+                <div class="panel-header">
+                    <h3 style="font-size: 1.1rem;">Recent Messages</h3>
+                    <a href="#" onclick="window.openChatbox()" style="font-size: 0.9rem; font-weight: 500; color: var(--primary);">Open Chat</a>
+                </div>
+                <div id="clientMessagesContainer">
+                    <div class="panel-empty">
+                        <div style="font-size: 2.5rem; color: var(--border-color); margin-bottom: 1.5rem;">
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem;">No messages yet</h4>
+                        <p style="font-size: 0.9rem; max-width: 250px;">When freelancers contact you about a project, their messages will appear here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Your Projects -->
+            <div class="panel-card client-only" id="clientProjectsPanel">
+                <div class="panel-header">
+                    <h3 style="font-size: 1.1rem;">Your Projects</h3>
+                    <a href="post-project.html" style="font-size: 0.9rem; font-weight: 500; color: var(--primary);">Post New</a>
+                </div>
+                <div id="projectsListContainer">
+                    <div class="panel-empty">
+                        <div style="font-size: 2.5rem; color: var(--border-color); margin-bottom: 1.5rem;">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem;">No projects posted yet</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 250px;">Have an idea? Post a project and hire top talent from your campus.</p>
+                        <button class="btn btn-primary" style="padding: 0.5rem 1.25rem;" onclick="window.location.href='post-project.html'">Post a project</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
